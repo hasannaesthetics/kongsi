@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       id: [
         { value: "", text: "Pilih peran Anda", disabled: true },
-        { value: "shipper", text: "Shipper (Mencari kapasitas kargo)" },
+        { value: "shipper", text: "Pengirim (Mencari kapasitas kargo)" },
         { value: "carrier", text: "Carrier (Menyediakan kapasitas truk)" }
       ]
     };
