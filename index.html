@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kongsi - Shared Freight. Smarter Logistics.</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Kongsi is an intelligent 4PL orchestrator in Indonesia. We dynamically match enterprise shippers with carrier space, reducing empty trucks and transportation costs by 20%.">
+  <meta name="description" content="Kongsi is an Indonesia-first shared freight orchestration platform. We dynamically match enterprise shippers with carrier space, reducing empty trucks and transport costs.">
   <meta name="keywords" content="logistics, B2B logistics, shared freight, truck sharing, Indonesia logistics, 4PL, shipping efficiency, carrier yield, carbon reduction">
   <meta property="og:title" content="Kongsi - Shared Freight. Smarter Logistics.">
   <meta property="og:description" content="Unlock hidden truck capacity across Indonesia. Reduce empty backhauls and lower transport costs.">
@@ -36,9 +36,24 @@
       </a>
       
       <div class="nav-links">
-        <a href="#shippers" class="nav-link">For Shippers</a>
-        <a href="#carriers" class="nav-link">For Carriers</a>
-        <a href="#join-pilot" class="nav-cta">Join the Pilot</a>
+        <a href="#shippers" class="nav-link">
+          <span class="lang-en">For Shippers</span>
+          <span class="lang-id">Untuk Shipper</span>
+        </a>
+        <a href="#carriers" class="nav-link">
+          <span class="lang-en">For Carriers</span>
+          <span class="lang-id">Untuk Carrier</span>
+        </a>
+        <a href="#join-pilot" class="nav-cta">
+          <span class="lang-en">Join the Pilot</span>
+          <span class="lang-id">Gabung Pilot</span>
+        </a>
+        
+        <!-- Language Switcher -->
+        <div class="lang-switch">
+          <button class="lang-switch-btn active" data-switch-lang="en">EN</button>
+          <button class="lang-switch-btn" data-switch-lang="id">ID</button>
+        </div>
       </div>
       
       <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -52,27 +67,53 @@
   <!-- Mobile Navigation Menu Overlay -->
   <div class="mobile-nav-menu" id="mobileMenu">
     <div class="mobile-nav-links">
-      <a href="#shippers" class="mobile-nav-link" id="mobileLinkShippers">For Shippers</a>
-      <a href="#carriers" class="mobile-nav-link" id="mobileLinkCarriers">For Carriers</a>
+      <a href="#shippers" class="mobile-nav-link" id="mobileLinkShippers">
+        <span class="lang-en">For Shippers</span>
+        <span class="lang-id">Untuk Shipper</span>
+      </a>
+      <a href="#carriers" class="mobile-nav-link" id="mobileLinkCarriers">
+        <span class="lang-en">For Carriers</span>
+        <span class="lang-id">Untuk Carrier</span>
+      </a>
     </div>
-    <a href="#join-pilot" class="nav-cta mobile-nav-cta" id="mobileLinkPilot">Join the Pilot</a>
+    <a href="#join-pilot" class="nav-cta mobile-nav-cta" id="mobileLinkPilot">
+      <span class="lang-en">Join the Pilot</span>
+      <span class="lang-id">Gabung Pilot</span>
+    </a>
+    
+    <!-- Mobile Language Switcher -->
+    <div class="mobile-lang-switch">
+      <div class="lang-switch">
+        <button class="lang-switch-btn active" data-switch-lang="en">EN</button>
+        <button class="lang-switch-btn" data-switch-lang="id">ID</button>
+      </div>
+    </div>
   </div>
 
   <!-- Hero Section -->
   <header class="hero">
     <div class="container">
       <div class="hero-tag fade-up">
-        <span>Pre-Product Pilot Program</span>
+        <span class="lang-en">Pre-Product Pilot Program</span>
+        <span class="lang-id">Program Pilot Pra-Produk</span>
       </div>
       <h1 class="hero-title fade-up delay-100">
-        Shared Freight.<br><span>Smarter Logistics.</span>
+        <span class="lang-en">Shared Freight.<br><span>Smarter Logistics.</span></span>
+        <span class="lang-id">Kargo Bersama.<br><span>Logistik Lebih Pintar.</span></span>
       </h1>
       <p class="hero-subtitle fade-up delay-200">
-        The intelligent 4PL orchestrator unlocking hidden truck capacity across Indonesia. We match shared freight with unused space to cut costs and increase asset yield.
+        <span class="lang-en">The intelligent 4PL orchestrator unlocking hidden truck capacity across Indonesia. We match shared freight with unused space to cut costs and increase asset yield.</span>
+        <span class="lang-id">Orkes 4PL cerdas yang membuka kapasitas truk tersembunyi di seluruh Indonesia. Kami mencocokkan kargo bersama dengan ruang kosong untuk memangkas biaya dan meningkatkan hasil aset.</span>
       </p>
       <div class="hero-ctas fade-up delay-300">
-        <a href="#join-pilot" class="btn btn-primary" id="ctaShipperBtn">I am a Shipper</a>
-        <a href="#join-pilot" class="btn btn-secondary" id="ctaCarrierBtn">I am a Carrier</a>
+        <a href="#join-pilot" class="btn btn-primary" id="ctaShipperBtn">
+          <span class="lang-en">I am a Shipper</span>
+          <span class="lang-id">Saya Shipper (Pemilik Kargo)</span>
+        </a>
+        <a href="#join-pilot" class="btn btn-secondary" id="ctaCarrierBtn">
+          <span class="lang-en">I am a Carrier</span>
+          <span class="lang-id">Saya Carrier (Penyedia Truk)</span>
+        </a>
       </div>
     </div>
   </header>
@@ -81,14 +122,23 @@
   <section class="problems-solutions">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-tag">Market Inefficiency</span>
-        <h2 class="section-title">The Logistics Paradox</h2>
+        <span class="section-tag">
+          <span class="lang-en">Market Inefficiency</span>
+          <span class="lang-id">Inefisiensi Pasar</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">The Logistics Paradox</span>
+          <span class="lang-id">Paradoks Logistik</span>
+        </h2>
       </div>
       
       <div class="split-grid">
         <!-- Problem Column -->
         <div class="split-col fade-up">
-          <h3 class="column-title">The 40% Waste</h3>
+          <h3 class="column-title">
+            <span class="lang-en">The 40% Waste</span>
+            <span class="lang-id">40% Terbuang Sia-Sia</span>
+          </h3>
           
           <div class="wireframe-card problem-card" aria-hidden="true">
             <!-- Truck Wireframe Graphic: Empty cargo -->
@@ -106,7 +156,10 @@
                 <rect x="75" y="78" width="200" height="27" rx="1" class="waste-box" />
                 <!-- Wasted Space Indication -->
                 <rect x="75" y="55" width="200" height="20" rx="1" class="empty-space-banner" />
-                <text x="175" y="68" text-anchor="middle" class="empty-text">EMPTY SPACE</text>
+                
+                <!-- Empty Space Text inside truck SVG -->
+                <text x="175" y="68" text-anchor="middle" class="empty-text lang-en">EMPTY SPACE</text>
+                <text x="175" y="68" text-anchor="middle" class="empty-text lang-id">RUANG KOSONG</text>
                 
                 <!-- Wheels Trailer -->
                 <circle cx="100" cy="118" r="7" fill="var(--bg-light)" stroke="var(--text-muted)" stroke-width="2.5" />
@@ -117,13 +170,17 @@
           </div>
           
           <p class="column-text">
-            Traditional logistics routing relies on static contracts and fragmented data, resulting in significant unused capacity. On average, trucks run 40% empty, burning margins and emitting unnecessary carbon.
+            <span class="lang-en">Traditional logistics routing relies on static contracts and fragmented data, resulting in significant unused capacity. On average, trucks run 40% empty, burning margins and emitting unnecessary carbon.</span>
+            <span class="lang-id">Perutean logistik tradisional bergantung pada kontrak statis dan data terfragmentasi, menghasilkan kapasitas menganggur yang signifikan. Rata-rata, truk berjalan 40% kosong, menghabiskan margin dan menghasilkan emisi karbon yang tidak perlu.</span>
           </p>
         </div>
         
         <!-- Solution Column -->
         <div class="split-col fade-up delay-100">
-          <h3 class="column-title">The Kongsi Density</h3>
+          <h3 class="column-title">
+            <span class="lang-en">The Kongsi Density</span>
+            <span class="lang-id">Kepadatan Kongsi</span>
+          </h3>
           
           <div class="wireframe-card solution-card" aria-hidden="true">
             <!-- Truck Wireframe Graphic: Full Cargo -->
@@ -143,7 +200,8 @@
                 <!-- Yield text indicator -->
                 <g class="yield-text-container">
                   <rect x="110" y="68" width="130" height="24" rx="3" fill="#fff" stroke="var(--accent-blue)" stroke-width="1" />
-                  <text x="175" y="84" text-anchor="middle" class="yield-text">✓ 100% YIELD</text>
+                  <text x="175" y="84" text-anchor="middle" class="yield-text lang-en">✓ 100% YIELD</text>
+                  <text x="175" y="84" text-anchor="middle" class="yield-text lang-id">✓ 100% PENDAPATAN ASET</text>
                 </g>
                 
                 <!-- Wheels Trailer -->
@@ -155,7 +213,8 @@
           </div>
           
           <p class="column-text">
-            Kongsi's intelligent 4PL orchestration dynamically matches enterprise freight with available space across vetted carriers, maximizing vehicle load capacity and lowering costs per unit shipped.
+            <span class="lang-en">Kongsi's intelligent 4PL orchestration dynamically matches enterprise freight with available space across vetted carriers, maximizing vehicle load capacity and lowering costs per unit shipped.</span>
+            <span class="lang-id">Orkestrasi 4PL cerdas Kongsi mencocokkan kargo korporat secara dinamis dengan ruang yang tersedia di seluruh carrier terverifikasi, memaksimalkan kapasitas muatan kendaraan dan menurunkan biaya per unit yang dikirim.</span>
           </p>
         </div>
       </div>
@@ -169,25 +228,37 @@
       <!-- For Shippers -->
       <div class="val-row" id="shippers">
         <div class="val-info fade-up">
-          <h2 class="val-title">Ship Faster.<br>Spend Less.</h2>
+          <h2 class="val-title">
+            <span class="lang-en">Ship Faster.<br>Spend Less.</span>
+            <span class="lang-id">Kirim Lebih Cepat.<br>Kirim Lebih Hemat.</span>
+          </h2>
           <ul class="val-list" aria-label="Shipper benefits">
             <li class="val-item">
               <div class="val-icon" aria-hidden="true">
                 <span class="material-symbols-outlined">done</span>
               </div>
-              <span class="val-text">Cut transport costs by 20%</span>
+              <span class="val-text">
+                <span class="lang-en">Cut transport costs by 20%</span>
+                <span class="lang-id">Pangkas biaya transportasi hingga 20%</span>
+              </span>
             </li>
             <li class="val-item">
               <div class="val-icon" aria-hidden="true">
                 <span class="material-symbols-outlined">done</span>
               </div>
-              <span class="val-text">Enterprise-grade SLAs</span>
+              <span class="val-text">
+                <span class="lang-en">Enterprise-grade SLAs</span>
+                <span class="lang-id">SLA kelas perusahaan yang andal</span>
+              </span>
             </li>
             <li class="val-item">
               <div class="val-icon" aria-hidden="true">
                 <span class="material-symbols-outlined">done</span>
               </div>
-              <span class="val-text">Instant capacity matching</span>
+              <span class="val-text">
+                <span class="lang-en">Instant capacity matching</span>
+                <span class="lang-id">Pencocokan kapasitas instan</span>
+              </span>
             </li>
           </ul>
         </div>
@@ -201,25 +272,37 @@
       <!-- For Carriers -->
       <div class="val-row reverse" id="carriers">
         <div class="val-info fade-up">
-          <h2 class="val-title">Drive Full.<br>Earn More.</h2>
+          <h2 class="val-title">
+            <span class="lang-en">Drive Full.<br>Earn More.</span>
+            <span class="lang-id">Truk Muatan Penuh.<br>Pendapatan Lebih.</span>
+          </h2>
           <ul class="val-list" aria-label="Carrier benefits">
             <li class="val-item">
               <div class="val-icon" aria-hidden="true">
                 <span class="material-symbols-outlined">done</span>
               </div>
-              <span class="val-text">Eliminate empty backhauls</span>
+              <span class="val-text">
+                <span class="lang-en">Eliminate empty backhauls</span>
+                <span class="lang-id">Hilangkan perjalanan pulang kosong (backhaul)</span>
+              </span>
             </li>
             <li class="val-item">
               <div class="val-icon" aria-hidden="true">
                 <span class="material-symbols-outlined">done</span>
               </div>
-              <span class="val-text">Increase margin per trip</span>
+              <span class="val-text">
+                <span class="lang-en">Increase margin per trip</span>
+                <span class="lang-id">Tingkatkan margin per perjalanan</span>
+              </span>
             </li>
             <li class="val-item">
               <div class="val-icon" aria-hidden="true">
                 <span class="material-symbols-outlined">done</span>
               </div>
-              <span class="val-text">Guaranteed fast payouts</span>
+              <span class="val-text">
+                <span class="lang-en">Guaranteed fast payouts</span>
+                <span class="lang-id">Jaminan pembayaran cepat</span>
+              </span>
             </li>
           </ul>
         </div>
@@ -239,8 +322,14 @@
       <div class="form-wrapper">
         
         <div class="form-header fade-up">
-          <h2 class="form-title">Join the Pilot</h2>
-          <p class="form-subtitle">Register your interest to access hidden logistics capacity in our upcoming cohort.</p>
+          <h2 class="form-title">
+            <span class="lang-en">Join the Pilot</span>
+            <span class="lang-id">Gabung Program Pilot</span>
+          </h2>
+          <p class="form-subtitle">
+            <span class="lang-en">Register your interest to access hidden logistics capacity in our upcoming cohort.</span>
+            <span class="lang-id">Daftarkan minat Anda untuk mengakses kapasitas logistik tersembunyi di kohort kami berikutnya.</span>
+          </p>
         </div>
 
         <!-- Form Card Container -->
@@ -248,36 +337,49 @@
           <form class="pilot-form" id="pilotForm" action="https://formspree.io/f/your_endpoint" method="POST">
             <!-- Full Name -->
             <div class="form-group">
-              <label class="form-label" for="fullName">Full Name</label>
-              <input class="form-input" id="fullName" name="fullName" placeholder="Jane Doe" required type="text">
+              <label class="form-label" for="fullName">
+                <span class="lang-en">Full Name</span>
+                <span class="lang-id">Nama Lengkap</span>
+              </label>
+              <input class="form-input" id="fullName" name="fullName" placeholder="Jane Doe" data-placeholder-en="Jane Doe" data-placeholder-id="Jane Doe" required type="text">
             </div>
 
             <!-- Company Name -->
             <div class="form-group">
-              <label class="form-label" for="company">Company Name</label>
-              <input class="form-input" id="company" name="company" placeholder="Acme Logistics Ltd." required type="text">
+              <label class="form-label" for="company">
+                <span class="lang-en">Company Name</span>
+                <span class="lang-id">Nama Perusahaan</span>
+              </label>
+              <input class="form-input" id="company" name="company" placeholder="Acme Logistics Ltd." data-placeholder-en="Acme Logistics Ltd." data-placeholder-id="PT Logistik Abadi" required type="text">
             </div>
 
             <!-- Email -->
             <div class="form-group">
-              <label class="form-label" for="email">Work Email</label>
-              <input class="form-input" id="email" name="email" placeholder="jane@acmelogistics.com" required type="email">
+              <label class="form-label" for="email">
+                <span class="lang-en">Work Email</span>
+                <span class="lang-id">Email Kerja</span>
+              </label>
+              <input class="form-input" id="email" name="email" placeholder="jane@acmelogistics.com" data-placeholder-en="jane@acmelogistics.com" data-placeholder-id="jane@acmelogistics.com" required type="email">
             </div>
 
             <!-- WhatsApp Number -->
             <div class="form-group">
-              <label class="form-label" for="whatsapp">WhatsApp Number</label>
-              <input class="form-input" id="whatsapp" name="whatsapp" placeholder="+62 812 3456 7890" required type="tel">
+              <label class="form-label" for="whatsapp">
+                <span class="lang-en">WhatsApp Number</span>
+                <span class="lang-id">Nomor WhatsApp</span>
+              </label>
+              <input class="form-input" id="whatsapp" name="whatsapp" placeholder="+62 812 3456 7890" data-placeholder-en="+62 812 3456 7890" data-placeholder-id="+62 812 3456 7890" required type="tel">
             </div>
 
             <!-- Role Dropdown -->
             <div class="form-group">
-              <label class="form-label" for="role">I am applying as...</label>
+              <label class="form-label" for="role">
+                <span class="lang-en">I am applying as...</span>
+                <span class="lang-id">Saya mendaftar sebagai...</span>
+              </label>
               <div class="select-wrapper">
                 <select class="form-input form-select" id="role" name="role" required>
-                  <option value="" disabled selected hidden>Select your role</option>
-                  <option value="shipper">Shipper (Looking for cargo capacity)</option>
-                  <option value="carrier">Carrier (Providing truck capacity)</option>
+                  <!-- Populated and translated dynamically in script.js -->
                 </select>
                 <div class="select-arrow" aria-hidden="true">
                   <span class="material-symbols-outlined">expand_more</span>
@@ -288,11 +390,15 @@
             <!-- Submit Button -->
             <div class="form-btn-container">
               <button class="btn btn-primary form-btn" id="submitBtn" type="submit">
-                <span>Join the Pilot</span>
+                <span class="lang-en">Join the Pilot</span>
+                <span class="lang-id">Gabung Program Pilot</span>
               </button>
             </div>
             
-            <p class="form-disclaimer">By submitting, you agree to our Terms of Service and Privacy Policy.</p>
+            <p class="form-disclaimer">
+              <span class="lang-en">By submitting, you agree to our Terms of Service and Privacy Policy.</span>
+              <span class="lang-id">Dengan mengirimkan, Anda menyetujui Ketentuan Layanan dan Kebijakan Privasi kami.</span>
+            </p>
           </form>
         </div>
 
@@ -301,12 +407,17 @@
           <div class="success-icon-box" aria-hidden="true">
             <span class="material-symbols-outlined">check_circle</span>
           </div>
-          <h2 class="success-title">Application Received</h2>
+          <h2 class="success-title">
+            <span class="lang-en">Application Received</span>
+            <span class="lang-id">Pendaftaran Diterima</span>
+          </h2>
           <p class="success-message">
-            Thank you for your interest. Our logistics team will review your details and contact you via WhatsApp within 24 hours to discuss pilot setup.
+            <span class="lang-en">Thank you for your interest. Our logistics team will review your details and contact you via WhatsApp within 24 hours to discuss pilot setup.</span>
+            <span class="lang-id">Terima kasih atas minat Anda. Tim logistik kami akan meninjau detail Anda dan menghubungi Anda melalui WhatsApp dalam waktu 24 jam untuk membahas pengaturan pilot.</span>
           </p>
           <button class="reset-btn" id="resetBtn" type="button">
-            Submit another application
+            <span class="lang-en">Submit another application</span>
+            <span class="lang-id">Kirim pendaftaran lain</span>
           </button>
         </div>
 
@@ -324,15 +435,53 @@
         <span>Kongsi</span>
       </div>
       <div class="footer-nav">
-        <a href="#shippers" class="footer-link">For Shippers</a>
-        <a href="#carriers" class="footer-link">For Carriers</a>
-        <a href="mailto:hello@kongsi.co" class="footer-link">Contact Support</a>
+        <a href="#shippers" class="footer-link">
+          <span class="lang-en">For Shippers</span>
+          <span class="lang-id">Untuk Shipper</span>
+        </a>
+        <a href="#carriers" class="footer-link">
+          <span class="lang-en">For Carriers</span>
+          <span class="lang-id">Untuk Carrier</span>
+        </a>
+        <a href="mailto:hello@kongsi.co" class="footer-link">
+          <span class="lang-en">Contact Support</span>
+          <span class="lang-id">Hubungi Bantuan</span>
+        </a>
       </div>
       <p class="footer-copyright">
-        © <span id="currentYear">2026</span> Kongsi. All rights reserved.
+        © <span id="currentYear">2026</span> Kongsi. <span class="lang-en">All rights reserved.</span><span class="lang-id">Hak cipta dilindungi undang-undang.</span>
       </p>
     </div>
   </footer>
+
+  <!-- Language Selection Modal (Popup) -->
+  <div class="lang-modal" id="langModal" aria-modal="true" role="dialog">
+    <div class="lang-modal-backdrop"></div>
+    <div class="lang-modal-card">
+      <div class="lang-modal-logo">
+        <svg class="logo-icon" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path>
+        </svg>
+        <span>Kongsi</span>
+      </div>
+      <h2 class="lang-modal-title">Pilih Bahasa / Select Language</h2>
+      <p class="lang-modal-subtitle">
+        Selamat datang di program pilot Kongsi. Silakan pilih bahasa Anda.<br>
+        Welcome to the Kongsi pilot program. Please select your language.
+      </p>
+      
+      <div class="lang-modal-options">
+        <button class="lang-option-btn" id="btnLangId" type="button">
+          <span class="lang-flag" aria-hidden="true">🇮🇩</span>
+          <span class="lang-name">Bahasa Indonesia</span>
+        </button>
+        <button class="lang-option-btn" id="btnLangEn" type="button">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span class="lang-name">English</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Script File -->
   <script src="script.js"></script>

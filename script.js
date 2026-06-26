@@ -96,7 +96,115 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Check URL parameters on page load
+  // 6. Language Selection & Translation System
+  const langModal = document.getElementById('langModal');
+  const btnLangId = document.getElementById('btnLangId');
+  const btnLangEn = document.getElementById('btnLangEn');
+  const langSwitchBtns = document.querySelectorAll('[data-switch-lang]');
+
+  // Helper to translate select element options dynamically
+  function translateSelectOptions(lang) {
+    if (!roleSelect) return;
+    
+    const options = {
+      en: [
+        { value: "", text: "Select your role", disabled: true },
+        { value: "shipper", text: "Shipper (Looking for cargo capacity)" },
+        { value: "carrier", text: "Carrier (Providing truck capacity)" }
+      ],
+      id: [
+        { value: "", text: "Pilih peran Anda", disabled: true },
+        { value: "shipper", text: "Shipper (Mencari kapasitas kargo)" },
+        { value: "carrier", text: "Carrier (Menyediakan kapasitas truk)" }
+      ]
+    };
+    
+    const currentVal = roleSelect.value;
+    roleSelect.innerHTML = "";
+    
+    options[lang].forEach(opt => {
+      const option = document.createElement('option');
+      option.value = opt.value;
+      option.textContent = opt.text;
+      if (opt.disabled) {
+        option.disabled = true;
+        option.hidden = true;
+      }
+      if (opt.value === currentVal) {
+        option.selected = true;
+      }
+      roleSelect.appendChild(option);
+    });
+
+    if (!currentVal) {
+      roleSelect.value = "";
+    }
+  }
+
+  // Set page language function
+  function setLanguage(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    localStorage.setItem('kongsi-lang', lang);
+
+    // Update input placeholders
+    document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+      const placeholderText = lang === 'en' 
+        ? el.getAttribute('data-placeholder-en') 
+        : el.getAttribute('data-placeholder-id');
+      el.placeholder = placeholderText;
+    });
+
+    // Rebuild select options for the select element
+    translateSelectOptions(lang);
+
+    // Update active highlight classes on both desktop and mobile switch buttons
+    langSwitchBtns.forEach(btn => {
+      if (btn.getAttribute('data-switch-lang') === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize Language State
+  const savedLang = localStorage.getItem('kongsi-lang');
+  if (savedLang) {
+    setLanguage(savedLang);
+  } else {
+    // Show Popup Selection Modal
+    if (langModal) {
+      langModal.classList.add('active');
+    }
+    // Fallback default language
+    setLanguage('en');
+  }
+
+  // Handle Modal Option Clicks
+  if (btnLangId && langModal) {
+    btnLangId.addEventListener('click', () => {
+      setLanguage('id');
+      langModal.classList.remove('active');
+    });
+  }
+
+  if (btnLangEn && langModal) {
+    btnLangEn.addEventListener('click', () => {
+      setLanguage('en');
+      langModal.classList.remove('active');
+    });
+  }
+
+  // Handle Inline Header Switcher Buttons
+  langSwitchBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetLang = btn.getAttribute('data-switch-lang');
+      setLanguage(targetLang);
+    });
+  });
+
+  // Check URL parameters on page load for pre-filling role
   const urlParams = new URLSearchParams(window.location.search);
   const roleParam = urlParams.get('role');
   if (roleParam && roleSelect) {
@@ -106,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 6. Formspree AJAX Form Submission with Success State
+  // 7. Formspree AJAX Form Submission with Success State
   const form = document.getElementById('pilotForm');
   const formContainer = document.getElementById('formContainer');
   const successState = document.getElementById('successState');
@@ -119,9 +227,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Set Loading State
       const btnSpan = submitBtn.querySelector('span');
+      const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
+      const loadingText = currentLang === 'en' ? 'Sending...' : 'Mengirim...';
       const originalText = btnSpan ? btnSpan.textContent : 'Join the Pilot';
       
-      if (btnSpan) btnSpan.textContent = 'Sending...';
+      if (btnSpan) btnSpan.textContent = loadingText;
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.7';
       submitBtn.style.cursor = 'not-allowed';
@@ -148,14 +258,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (Object.prototype.hasOwnProperty.call(data, 'errors')) {
               alert(data.errors.map(error => error.message).join(", "));
             } else {
-              alert("Submission failed. Please check your inputs and try again.");
+              const errorText = currentLang === 'en' 
+                ? "Submission failed. Please check your inputs and try again."
+                : "Pengiriman gagal. Silakan periksa masukan Anda dan coba lagi.";
+              alert(errorText);
             }
           });
         }
       })
       .catch(error => {
         console.error('Error submitting form:', error);
-        alert("A network error occurred. Please check your connection and try again.");
+        const connectionError = currentLang === 'en'
+          ? "A network error occurred. Please check your connection and try again."
+          : "Terjadi kesalahan jaringan. Silakan periksa koneksi Anda dan coba lagi.";
+        alert(connectionError);
       })
       .finally(() => {
         // Reset Button Loading State
@@ -167,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Reset Form (Submit Another Application)
+  // 8. Reset Form (Submit Another Application)
   if (resetBtn && formContainer && successState) {
     resetBtn.addEventListener('click', () => {
       successState.style.display = 'none';
